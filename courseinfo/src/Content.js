@@ -1,15 +1,15 @@
-function Content(props){
+function Paragrafs({part}){
+    return(
+        <p>{part.name} {part.exercises}</p>
+    )
+}
+
+function Content({parts}){
     return (
         <div>
-            <p> 
-                {props.p1} {props.ex1}
-            </p>
-            <p>
-                {props.p2} {props.ex2}
-            </p>
-            <p>
-                {props.p3} {props.ex3}
-            </p>
+            <Paragrafs part={parts[0]}/>
+            <Paragrafs part={parts[1]}/>
+            <Paragrafs part={parts[2]}/>
         </div>
     )
 }
