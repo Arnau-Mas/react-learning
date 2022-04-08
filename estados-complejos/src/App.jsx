@@ -2,7 +2,7 @@ import { useState } from 'react'
 import './App.css'
 
 function App() {
-  /* Esto es una mala práctica porque hay que separar por estados cuantos más datos mejor, pero se hizo así para entender los estados complejos */
+  /* Esto es un ejercicio simplemente para entender estados complejos*/
 
   /* Creem un objecte que contingui totes les dades */
   const [counters, setCounters] = useState({
@@ -30,7 +30,7 @@ function App() {
     setCounters({ 
       ...counters,
       counterRight:counters.counterRight+1,
-      numberOfClicks:counters.numberOfClicks+1
+      numberOfClicks:counters.numberOfClicks+1 //Aquest és prescindible pq ja tens l'estat arrayClicks
     })
     /* Lo de dalt amb prevCounters seria:
     setCounters(prevCounters => {
@@ -51,8 +51,8 @@ function App() {
         <button onClick={clickRight}>Right</button>
         <p>{counters.counterRight}</p>
       </div>
-      <p>Clicks: {counters.numberOfClicks}</p>
-      <p>ClicksArray:{arrayClicks}</p>
+      <p>Clicks: {counters.numberOfClicks} /  Prescindible pq ja tenim l'estat d'abaix</p>
+      <p>ClicksArray:{arrayClicks.length}</p>
     </div>
   )
 }
