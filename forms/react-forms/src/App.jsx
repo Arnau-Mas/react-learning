@@ -8,6 +8,7 @@ function App({notes}){
     title:"",
     content:""
   });
+
   function catchNote(event){
     if(event.target.id ==="title"){
       setNewNote({
