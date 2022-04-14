@@ -43,6 +43,10 @@ button {
 
 .country{
   background-color: aquamarine;
-  width: 20rem;
-  height: 10rem;
+  display: flex;
+}
+
+.buttonShow{
+  font-size: 12px;
+  height: 1rem;
 }
